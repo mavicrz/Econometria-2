@@ -8,7 +8,7 @@ rm(list=ls())
 gc()
 
 # Bibliotecas
-xfun::pkg_attach(c('tidyverse','purrr', 'haven', 'tibble', 'naniar','fixest'), install=T)
+xfun::pkg_attach(c('tidyverse','purrr', 'haven', 'tibble', 'naniar','fixest', 'readr'), install=T)
 
 # Input
 mogno_file <- 'input/base_mogno.dta'
@@ -119,6 +119,8 @@ mogno_reg <- mogno %>%
                 treatt_area3 = case_when(mahog_area ==1 & year >=2009 ~ total_mahogx,
                                          T ~0),
                 pre = case_when(mahog_area ==1 & year > 1996 & year < 1999 ~1, T~0))
+
+readr::write_csv(mogno_reg, file = 'output/base_mogno_treated.csv')
 
 # 2. Panel A: Para and Other Mahogany Occuring States Separately ---------------
 # Resultado ficou igual quando a coeficientes e nível de significância, mas erro padrão diferente
