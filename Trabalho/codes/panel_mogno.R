@@ -8,7 +8,7 @@ rm(list=ls())
 gc()
 
 # Bibliotecas
-xfun::pkg_attach(c('tidyverse','purrr', 'haven', 'tibble', 'naniar'), install=T)
+xfun::pkg_attach(c('tidyverse','purrr', 'haven', 'tibble', 'naniar','fixest'), install=T)
 
 # Input
 mogno_file <- 'input/base_mogno.dta'
