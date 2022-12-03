@@ -14,13 +14,8 @@ xfun::pkg_attach(c('tidyverse','purrr', 'haven', 'tibble', 'naniar'), install=T)
 mogno_file <- 'input/base_mogno.dta'
 
 # 1. Base Mogno ACM ----------------------------------------------------------------
-painel_educ <- readr::read_csv(file = 'output/painel_educ.csv') %>% 
-  dplyr::select(year =ano, code = codmun, drpt_rate = taxa_abandono_6ano_9ano,
-                scl_rate =taxa_matriculas)
-
 mogno <- haven::read_dta(mogno_file,encoding = 'latin1') %>% 
   tibble::as_tibble() %>% 
-  dplyr::full_join(painel_educ, by = c('year', 'code')) %>% 
   dplyr::group_by(amc_code_1991_1997, year) %>% 
   dplyr::summarise(across(.cols = c('area','plant', 'heart', 'infecc', 'neop',
                                     'pop_und5', 'und5_mort', 'traff', 'suic', 'pol_deaths',
@@ -28,11 +23,11 @@ mogno <- haven::read_dta(mogno_file,encoding = 'latin1') %>%
                                     'gdp_ag', 'hom_male', 'hom_m_prime', 'hom_m_sing',
                                     'hom_m_nothome', 'hom_m_firearm'),sum, na.rm = T),
                    across(.cols = c('uf', 'mmc_code', 'mahogx_state',
-                                    'otherx_state', 'mahog_exp_pre', 'drpt_rate', 'scl_rate'), mean, na.rm = T),
+                                    'otherx_state', 'mahog_exp_pre'), mean, na.rm = T),
                    across(.cols = mahog_area, max)) %>%
   dplyr::group_by(amc_code_1991_1997) %>% 
   dplyr::mutate(code = group_indices(), 
-                code = case_when(amc_code_1991_1997 != '' ~ code -1, T~ as.double(NA)), # Tive que fazer uma gambiarra porque a função não é igual ao group do stata
+                code = case_when(amc_code_1991_1997 != '' ~ code -1, T~ as.double(NA)),
                 across(.cols = c('mahogx_state', 'otherx_state'), ~case_when(is.na(.)==T ~0, T~.)),
                 total_mahogx = (otherx_state + mahogx_state)/1000000,
                 gdp_pc = (gdp/pop),
@@ -95,17 +90,12 @@ mogno_base_var <- mogno %>%
                 traff_base = case_when(year == 1995 ~ traff_m,
                                        T~ as.double(NA)),
                 pop1995 = case_when(year == 1995 ~ pop,
-                                    T~ as.double(NA)),
-                drpt_rate_base = case_when(year == 1995 ~ drpt_rate,
-                                           T~ as.double(NA)),
-                scl_rate_base = case_when(year == 1995 ~ scl_rate,
-                                           T~ as.double(NA))) %>% 
+                                    T~ as.double(NA))) %>% 
   dplyr::group_by(code) %>% 
   dplyr::summarise(across(.cols = c('hom_base', 'area_base', 'lngdp_base',
                                     'gdpag_base', 'pol_base', 'und5_base',
                                     'infecc_base', 'heart_base', 'neop_base',
-                                    'suic_base', 'traff_base', 'pop1995',
-                                    'drpt_rate_base', 'scl_rate_base'), mean, na.rm=T),
+                                    'suic_base', 'traff_base', 'pop1995'), mean, na.rm=T),
                    avg_pop = mean(pop))
 
 mogno_reg <- mogno %>% 
@@ -240,10 +230,5 @@ mogno_reg_2 <- mogno_2 %>%
 
 readr::write_csv(mogno_reg_2, file = 'output/base_mogno_tables.csv')
 haven::write_dta(mogno_reg_2, path = 'output/base_mogno_tables.dta')
-
-
-base_tables <- haven::read_dta(file = 'output/base_mogno_tables_stata.dta',
-                               encoding = 'latin1') %>%
-  dplyr::full_join(painel_educ, by = c('year', 'code'))
 
 
