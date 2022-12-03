@@ -1,0 +1,40 @@
+ B.7 Proporção da população de 10 a 15 anos ocupada (Taxa de trabalho infantil)
+Prop.pop 10-15 anos ocupada(%) por Unidade da Federação
+Período:2009
+"Unidade da Federação";"Prop.pop_10-15_anos_ocupada(%)";"Informações Estatísticas"
+"Rondônia";16,8;IC=(9,0-24,7)
+"Acre";15,5;IC=(11,6-19,3)
+"Amazonas";8,2;IC=(5,3-11,2)
+"Roraima";*;*
+"Pará";11,1;IC=(8,6-13,5)
+"Amapá";6,4;IC=(4,0-8,8)
+"Tocantins";18,1;IC=(14,8-21,3)
+"Maranhão";12,5;IC=(8,2-16,9)
+"Piauí";15,8;IC=(10,8-20,7)
+"Ceará";14,8;IC=(12,6-17,0)
+"Rio Grande do Norte";12,3;IC=(8,4-16,3)
+"Paraíba";7,8;IC=(5,7-9,8)
+"Pernambuco";10,7;IC=(8,0-13,4)
+"Alagoas";10,3;IC=(6,3-14,3)
+"Sergipe";9,2;IC=(4,0-14,4)
+"Bahia";14,9;IC=(12,4-17,3)
+"Minas Gerais";10,3;IC=(9,0-11,5)
+"Espírito Santo";7,3;IC=(4,0-10,7)
+"Rio de Janeiro";2,5;IC=(1,8-3,2)
+"São Paulo";4,4;IC=(3,8-5,1)
+"Paraná";9,0;IC=(7,0-10,9)
+"Santa Catarina";11,8;IC=(8,2-15,4)
+"Rio Grande do Sul";8,6;IC=(7,3-10,0)
+"Mato Grosso do Sul";7,1;IC=(5,2-9,0)
+"Mato Grosso";11,9;IC=(8,7-15,2)
+"Goiás";12,5;IC=(10,6-14,4)
+"Distrito Federal";*;*
+"Total";9,3;IC=(8,8-9,8)
+ Fonte: Pesquisa Nacional por Amostra de Domicílios - PNAD 2004-2009, 2011-2013
+ Notas:
+ 
+ Proporção da população de 10 a 15 anos ocupada: Percentual da população de 10 a 15 anos ocupada.
+ Por se tratar de uma pesquisa amostral, o valor do indicador pode não ter significância estatística quando desagregado para segmentos
+ populacionais específicos, tais como indígenas, amarelos e pretos, pois estes grupos são muito pequenos em alguns estados e regiões.
+ Os valores das PNAD 2001 a 2013 estão ponderados considerando os pesos amostrais disponibilizados após a publicação do Censo 2010.
+ 
