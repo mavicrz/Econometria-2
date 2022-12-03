@@ -1,5 +1,6 @@
-# Regressões Mogno - Ariaster e Soares (2017) -------------------------------------
-# Este código cria as regressões e gráficos
+# Regressões Mogno  ------------------------------------------------------------
+# Este código cria as regressões e gráficos do trabalho de Mogno e spillover sobre
+# educação e trabalho infantil
 
 # 0. Configuração --------------------------------------------------------------
 
