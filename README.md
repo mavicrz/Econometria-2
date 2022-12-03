@@ -1,6 +1,13 @@
 # Trabalho Econometria 2
 
-Esta pasta inclui códigos e arquivos usados para o trabalho de Econometria II.
+Esta pasta inclui códigos e arquivos usados para o trabalho de Econometria II na FEA-USP com a profª Fabiana Rocha.
+
+*Título:* Crescendo na ilegalidade: Evidência da exposição infantil ao comércio ilegal de Mogno no Brasil
+
+*Dados:* 
+- Exportação de Mogno: https://www.openicpsr.org/openicpsr/project/113679/version/V1/view
+- Taxa de Abandono: https://www.gov.br/inep/pt-br/areas-de-atuacao/pesquisas-estatisticas-e-indicadores
+- Taxa de Trabalho Infantil: http://tabnet.datasus.gov.br/cgi/idb2000/fqb07.htm
 
 1- Códigos:
 Na pasta "Trabalho > code" estão os códigos usados no trabalho:
