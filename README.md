@@ -2,9 +2,9 @@
 
 Esta pasta inclui códigos e arquivos usados para o trabalho de Econometria II.
 
-1 - Códigos:
+\item Códigos:
 Na pasta "Trabalho > code" estão os códigos usados no trabalho:
-1A - Arquivos em do file são os códigos de replicação de Ariaster e Soares (2017) abertos na AEJ (https://www.aeaweb.org/articles?id=10.1257/app.20160055), 
+\subitem Arquivos em do file são os códigos de replicação de Ariaster e Soares (2017) abertos na AEJ (https://www.aeaweb.org/articles?id=10.1257/app.20160055), 
 usamos estes arquivos como base para replicar o tratamento da base de exportações de Mogno e para a replicação da tabela 2 de regressões.
 1B - O código panel_mogno.R replica os tratamentos dos códigos em stata.
 1C - O código panel_censo.R trata microdados do Censo Escolar de 1995 até 2013 para obter as taxas de abandono escolar nos 
