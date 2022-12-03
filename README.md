@@ -14,6 +14,3 @@ Anos finais do Ensino Fundamental e no Ensino Médio.
 
 2 - Arquivos:
 Disponibilizamos os arquivos brutos em "Trabalho > Input" e os arquivos tratados em "Trabalho > Output"
-
-3 - Anexo:
-Outras regressões do artigo estão no arquivo Anexo.pdf
